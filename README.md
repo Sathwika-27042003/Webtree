@@ -39,9 +39,9 @@ Route::get('/addsheet'): To create today's Attendance Form manually<br>
 - To update the Attendance<br>
 Route::get('/present/{id}): To mark status as present<br>
 Route::get('/absent/{id}):To mark status as absent<br>
-    ```  Route::get('/present/{id}', [Attendance::class, 'makePresent'])->name('student.present');
-    Route::get('/absent/{id}', [Attendance::class, 'makeAbsent'])->name('student.absent');
-    ```
+      ```  Route::get('/present/{id}', [Attendance::class, 'makePresent'])->name('student.present');
+            Route::get('/absent/{id}', [Attendance::class, 'makeAbsent'])->name('student.absent');
+      ```
       Image:  
 ![Image](./4.jpeg) 
 -Attendance of Particulatr Student<br>
