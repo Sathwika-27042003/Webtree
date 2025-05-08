@@ -37,19 +37,23 @@ Route::get('/addsheet'): To create today's Attendance Form manually<br>
     Route::get('/attandance', [Attendance::class, 'attendancelist']);
   ```
 - To update the Attendance<br>
-Route::get('/present/{id}): To mark status as present<br>
-Route::get('/absent/{id}):To mark status as absent<br>
-      ```  Route::get('/present/{id}', [Attendance::class, 'makePresent'])->name('student.present');
-            Route::get('/absent/{id}', [Attendance::class, 'makeAbsent'])->name('student.absent');
-      ```
-      Image:  
+
+  Route::get('/present/{id}): To mark status as present<br>
+  Route::get('/absent/{id}):To mark status as absent<br>
+
+    ``` Route::get('/present/{id}', [Attendance::class, 'makePresent'])->name('student.present');
+        Route::get('/absent/{id}', [Attendance::class, 'makeAbsent'])->name('student.absent');
+    ```
+  Image:  
 ![Image](./4.jpeg) 
--Attendance of Particulatr Student<br>
-Route::get('/student/{id}): To get students details by using Roll Number<br>
+- Attendance of Particulatr Student<br>
+
+  Route::get('/student/{id}): To get students details by using Roll Number<br>
+  
       ```
         Route::get('/student/{id}', [Attendance::class, 'student'])->name('student.student');
-    ```
-      Image:  
+      ```
+  Image:  
 ![Image](./3.jpeg) 
 # Bugs or Update
 - Currently, we create the attendance form manually each day using the /addsheet url. By using a cron job, we can schedule this task to run automatically at a specified time.
