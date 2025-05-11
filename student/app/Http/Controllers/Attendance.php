@@ -50,7 +50,7 @@ class Attendance extends Controller
     public function student($id) {
         $name = DB::select('SELECT name FROM student where roll_number = ?', [$id]);
         $rollno =  DB::select('SELECT roll_number FROM student where roll_number = ?', [$id]);
-        $users = DB::select('SELECT s.name, s.roll_number, a.date, a.status FROM student s JOIN attendance a ON s.roll_number = a.roll_number');
+       $users = DB::select('SELECT s.name, s.roll_number, a.date, a.status FROM student s JOIN attendance a ON s.roll_number = a.roll_number where s.roll_number = ?', [$id]);
         return view('student_view', ['users' => $users,'Name' => $name,'RollNo' => $rollno]);
     }
 
